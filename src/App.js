@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ThreadDisplay from './ThreadDisplay/components/ThreadDisplay';
+import Header from './Header/components/Header'
 import { firebaseConfig } from './core/firebase/config';
 import * as firebase from 'firebase';
 import './App.css';
@@ -14,7 +15,10 @@ class App extends Component {
 
   render() {
     return (
+      <div className="app">
+      <Header title="Let's chat" />
       <ThreadDisplay database={this.database} />
+      </div>
     );
   }
 }
