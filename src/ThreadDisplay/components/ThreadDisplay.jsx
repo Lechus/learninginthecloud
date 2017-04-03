@@ -40,14 +40,14 @@ class ThreadDisplay extends Component {
   render() {
     return (
       <div>
+        <PostEditor addPost={this.addPost}/>
         {
-          this.state.posts.map((postBody, idx) => {
+          this.state.posts.reverse().map((postBody, idx) => {
             return (
               <Post key={idx} postBody={postBody}/>
             )
           })
         }
-        <PostEditor addPost={this.addPost}/>
       </div>
     );
   }
